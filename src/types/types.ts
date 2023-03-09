@@ -8,7 +8,7 @@ export interface NewTransactionModalProps {
 export interface TransactionProps {
   title: string;
   amount: number;
-  type: null | 'deposit' | 'withdraw';
+  type: 'deposit' | 'withdraw';
   category: string;
 }
 

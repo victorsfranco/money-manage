@@ -26,7 +26,31 @@ createServer({
           type: 'withdraw',
           category: 'Despesas Fixas',
           createdAt: new Date('2023-01-15 15:00:00')
-        }
+        },
+        {
+          id: 3,
+          title: 'Tocar em casamento',
+          amount: 300,
+          type: 'deposit',
+          category: 'Freelance',
+          createdAt: new Date('2023-01-15 15:00:00')
+        },
+        {
+          id: 4,
+          title: 'Conta de energia',
+          amount: 250,
+          type: 'withdraw',
+          category: 'Despesas Fixas',
+          createdAt: new Date('2023-01-15 15:00:00')
+        },
+        {
+          id: 5,
+          title: 'Conta de agua',
+          amount: 250,
+          type: 'withdraw',
+          category: 'Despesas Fixas',
+          createdAt: new Date('2023-01-15 15:00:00')
+        },
       ]
     })
   },
