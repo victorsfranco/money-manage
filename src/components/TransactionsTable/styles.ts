@@ -40,24 +40,21 @@ export const Container = styled.div`
 
 export const EmptyContainer = styled.div`
   margin-top: 5rem;
-  padding: 1rem 0;
+  padding: 2rem 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1.5rem;
 
   background-color: #fff;
   color: var(--text-body);
   border: 1px solid #969CB330;
   border-radius: 4px;
 
-  h3 {
-    margin-bottom: 1rem;
-  }
-  
   span {
     margin: 0 0.25rem;
-    padding: 0.25rem;
+    padding: 0.5rem 1rem;
 
     background-color: var(--blue-light);
     color: #fff;

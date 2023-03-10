@@ -46,6 +46,8 @@ export const NewTransactionModal = ({ isOpen, onRequestClose }: NewTransactionMo
       type: 'deposit',
       category: ''
     })
+
+    onRequestClose()
   }
 
   return (
