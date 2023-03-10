@@ -28,8 +28,13 @@ export const Container = styled.div`
     font-weight: 500;
   }
 
-  & .highlight-background {
+  & .positive-total {
     background: var(--green);
+    color: #fff;
+  }
+
+  & .negative-total {
+    background: var(--red);
     color: #fff;
   }
 `

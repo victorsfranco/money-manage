@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import CountUp from "react-countup";
 import { useTransactions } from "../../hooks/useTransactions";
 
 import incomeImg from "../../assets/income.svg";
@@ -35,10 +35,15 @@ export function Summary() {
           <img src={incomeImg} alt="Entradas" />
         </header>
         <strong>
-          {new Intl.NumberFormat('pt-br', {
-            style: 'currency',
-            currency: 'BRL'
-          }).format(summary.deposits)}
+          <CountUp
+            start={0}
+            end={summary.deposits}
+            duration={0.9}
+            decimals={2}
+            decimal=','
+            prefix="R$ "
+            separator="."
+          />
         </strong>
       </div>
 
@@ -49,23 +54,33 @@ export function Summary() {
         </header>
         <strong>
           -
-          {new Intl.NumberFormat('pt-br', {
-            style: 'currency',
-            currency: 'BRL'
-          }).format(summary.withdraws)}
+          <CountUp
+            start={0}
+            end={summary.withdraws}
+            duration={0.9}
+            decimals={2}
+            decimal=','
+            prefix="R$ "
+            separator="."
+          />
         </strong>
       </div>
 
-      <div className="highlight-background">
+      <div className={summary.total >= 0 ? 'positive-total' : 'negative-total'}>
         <header>
           <p>Total</p>
           <img src={totalImg} alt="Total" />
         </header>
         <strong>
-          {new Intl.NumberFormat('pt-br', {
-            style: 'currency',
-            currency: 'BRL'
-          }).format(summary.total)}
+          <CountUp
+            start={0}
+            end={summary.total}
+            duration={0.9}
+            decimals={2}
+            decimal=','
+            prefix='R$ '
+            separator="."
+          />
         </strong>
       </div>
     </Container>
