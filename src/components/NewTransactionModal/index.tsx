@@ -1,5 +1,5 @@
 import Modal from 'react-modal';
-import { ChangeEvent, FormEvent, useState, useContext } from 'react';
+import { ChangeEvent, FormEvent, useState } from 'react';
 import { NewTransactionModalProps, TransactionProps } from '../../types/types';
 
 import closeImg from '../../assets/close.svg';
